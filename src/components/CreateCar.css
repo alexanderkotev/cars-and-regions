@@ -1,0 +1,10 @@
+.createCarTable {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.message {
+    font-size: 20px;
+}
