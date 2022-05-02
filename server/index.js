@@ -98,7 +98,7 @@ app.get('/regions', async (req, res, next) => {
     const allPlaces = await pool.query(query);
     res.json(allPlaces.rows);
   } catch (error) {
-    res.next(`${error}`);
+    next(`${error}`);
     console.error(error);
   }
 });
