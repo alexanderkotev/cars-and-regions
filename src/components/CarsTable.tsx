@@ -34,7 +34,7 @@ const CarsTable: React.FC<CarsTableProps> = ({carsData, deleteCar}): JSX.Element
 
     return (
         <>
-            <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }} style={{marginBottom: '20px'}}>
+            <FormControl variant="standard" sx={{ m: 1, minWidth: 120, marginBottom: 20 }}>
                 <InputLabel>Brand</InputLabel>
                 <Select
                     value={brandFilter}
@@ -60,7 +60,7 @@ const CarsTable: React.FC<CarsTableProps> = ({carsData, deleteCar}): JSX.Element
                     {availableRegions.map(region => <MenuItem key={region} value={region}>{region}</MenuItem>)}
                 </Select>
             </FormControl>
-            <TableContainer style={{margin: '20px 0'}} component={Paper}>
+            <TableContainer sx={{margin: '20px 0'}} component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                 <TableRow>
@@ -88,7 +88,7 @@ const CarsTable: React.FC<CarsTableProps> = ({carsData, deleteCar}): JSX.Element
                 </TableBody>
             </Table>
             </TableContainer>
-            <Link style={{fontSize: '20px', textDecoration: 'none'}} to="/create-car" >Create new car</Link>
+            <Link className='link' to="/create-car" >Create new car</Link>
             </>
     );
 }
